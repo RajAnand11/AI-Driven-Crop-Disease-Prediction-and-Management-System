@@ -1,0 +1,564 @@
+<html class="animate">
+ <head>
+  <title>
+   AI Farming
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .animate {
+      opacity: 0;
+      transform: translateY(100px);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    /* Define the keyframes for the slide-in effect */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add some delay between each element's animation */
+    .animate:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .animate:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .animate:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+        header {
+            background-color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        header .logo img {
+            margin-right: 10px;
+            height: 40px;
+        }
+        header .scan-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+        .hero .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+        .hero .slides {
+            display: none;
+        }
+        .hero .slides img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+        .hero .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .hero .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .section-title {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .features .feature {
+            text-align: center;
+            font-size: 18px;
+        }
+        .feature i {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .image-section {
+            background: url('Only Image\\pexels-nc-farm-bureau-mark-2749165.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-section .content {
+            background-color: rgba(91, 186, 97, 0.482);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .testimonial {
+            background-color: #4ba74f;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .testimonial p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .testimonial .author {
+            font-size: 16px;
+            font-style: italic;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .contact h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .contact .contact-item {
+            margin-bottom: 20px;
+        }
+        .contact .contact-item i {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+        .footer {
+            background-color: #f0f0f0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .footer h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .footer .step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .footer .step i {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+        .footer .step p {
+            font-size: 18px;
+        }
+        .footer .links {
+            margin-top: 20px;
+        }
+        .footer .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .footer .social {
+            margin-top: 20px;
+        }
+        .footer .social a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 24px;
+        }
+        .footer .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+        .chatbot-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  animation: float 2s infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.chatbot-icon:hover {
+  background-color: #3e8e41;
+  animation: none;
+}
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <img alt="AI Farming Logo" height="40" src="Only Image\aarablelogo.jpg" width="40"/>
+    AGROFIELD
+   </div>
+   <div class="chatbot-icon">
+    <i class="fas fa-robot"></i>
+  </div>
+   <nav>
+    <a href="#">
+     Home
+    </a>
+    <a href="finance.html">
+     Finance 
+    </a>
+    <a href="MainMedia.html">
+     Media
+    </a>
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Services</a>
+        <div class="dropdown-content">
+          <a href="weather.html">Weather</a>
+          <a href="#">Near Shop</a>
+          <a href="aimodal.html">Scan Image</a>
+        </div>
+      </div>
+    <a href="login.html"Login
+    <button class="scan-btn">
+     Login </a>
+    </button>
+   </nav>
+  </header>
+  <section class="hero">
+   <div class="slideshow-container">
+    <div class="slides">
+     <img alt="Field of crops" height="600" src="Only Image\pexels-despierres-cecile-93261-299113.jpg" width="1920"/>
+    </div>
+    <div class="slides">
+     <img alt="Vegetable garden" height="600" src="Only Image\2-2-2-2foodgroups_vegetables_detailfeature s1.jpg" width="1920"/>
+    </div>
+    <div class="slides">
+     <img alt="Greenhouse with plants" height="600" src="Only Image\pexels-mvdheuvel-2284170.jpg" width="1920"/>
+    </div>
+    <div class="slides">
+     <img alt="Close-up of vegetables" height="600" src="Only Image\pexels-livier-garcia-645743-1459339.jpg" width="1920"/>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">
+    </a>
+    <a class="next" onclick="plusSlides(1)">
+    </a>
+   </div>
+   <div class="text">
+    <h1>
+     Revolutionize Your Farming with AI
+    </h1>
+    <p>
+        AI technology empowers farmers by analyzing data from plant health to accurately predict diseases related to insect infection, fungal infection and deficiency of nutrition, allowing for targeted treatments, reducing crop loss, and optimizing resource use for sustainable farming.
+    </p>
+    <a href="learnpopup.html"
+    <button herf="learnpopup.html" class="btn">
+     Learn More</a>
+    </button>
+    <a href="aimodal.html"
+    <button class="btn">
+     Scan Now</a>
+    </button>
+   </div>
+   <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)">
+    </span>
+    <span class="dot" onclick="currentSlide(2)">
+    </span>
+    <span class="dot" onclick="currentSlide(3)">
+    </span>
+    <span class="dot" onclick="currentSlide(4)">
+    </span>
+   </div>
+  </section>
+  <section class="section-title">
+   <h2>
+    AI-Powered Crop Disease Prediction
+   </h2>
+   <div class="features">
+    <div class="feature">
+     <i class="fas fa-brain">
+     </i>
+     <p>
+      Advanced AI Algorithms
+     </p>
+    </div>
+    <div class="feature">
+     <i class="fas fa-clock">
+     </i>
+     <p>
+      Real-Time Disease Monitoring
+     </p>
+    </div>
+    <div class="feature">
+     <i class="fas fa-chart-line">
+     </i>
+     <p>
+      Data-Driven Insights
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="image-section">
+   <div class="content">
+    <h2>
+     Empower Your Farm with AI
+    </h2>
+    <p>
+     AI tools for precision farming and increased efficiency.
+    </p>
+   </div>
+  </section>
+  <section class="testimonial">
+   <p>
+    AI enhances farmers' wealth by optimizing crop management, reducing costs, and increasing yields. Precise data analysis helps in applying resources like water and fertilizers more efficiently, lowering expenses. Early disease and pest detection minimizes crop loss and avoids costly treatments. Automated systems reduce labor costs and improve operational efficiency. Together, these advancements lead to higher productivity, better-quality produce, and increased profitability, ultimately boosting farmers' financial well-being.
+   </p>
+  </section>
+  <section class="contact">
+   <h3>
+    Get in Touch
+   </h3>
+   <div class="contact-item">
+    <i class="fas fa-envelope">
+    </i>
+    <p>
+     General Inquiries: aarablefarm@gmail.com
+    </p>
+   </div>
+   <div class="contact-item">
+    <i class="fas fa-phone">
+    </i>
+    <p>
+     Customer Support:  +91 72060-61751
+    </p>
+   </div>
+   <div class="contact-item">
+    <i class="fas fa-comments">
+    </i>
+    <p>
+     Feedback: aarablefarming.com
+    </p>
+   </div>
+  </section>
+  <section class="footer">
+   <h3>
+    How to Use Our AI Tools
+   </h3>
+   <div class="step">
+    <i class="fas fa-user-plus">
+    </i>
+    <p>
+     Sign Up: Create an account to access our AI tools.
+    </p>
+   </div>
+   <div class="step">
+    <i class="fas fa-upload">
+    </i>
+    <p>
+     Upload Crop Data: Provide necessary data for analysis.
+    </p>
+   </div>
+   <div class="step">
+    <i class="fas fa-chart-pie">
+    </i>
+    <p>
+     Get Predictions: Receive real-time predictions and take action.
+    </p>
+   </div>
+   <div class="links">
+    <a href="#">
+     Home
+    </a>
+    <a href="#">
+     Finance
+    </a>
+    <a href="#">
+     Media
+    </a>
+   </div>
+   <div class="social">
+    <a href="#">
+     <i class="fab fa-facebook">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+   </div>
+   <div class="copyright">
+    © AI Farming 2024. Empowering Farmers with AI Technology. All rights reserved.
+   </div>
+  </section>
+  <script>
+   let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+  </script>
+ </body>
+</html>

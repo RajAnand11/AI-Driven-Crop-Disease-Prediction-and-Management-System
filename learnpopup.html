@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 142.1 76.2% 36.3%;
+--primary-foreground: 355.7 100% 97.3%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 142.1 76.2% 36.3%;
+				}
+				.dark {
+					--background: 20 14.3% 4.1%;
+--foreground: 0 0% 95%;
+--popover: 0 0% 9%;
+--popover-foreground: 0 0% 95%;
+--card: 24 9.8% 10%;
+--card-foreground: 0 0% 95%;
+--primary: 142.1 70.6% 45.3%;
+--primary-foreground: 144.9 80.4% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 0 0% 15%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 12 6.5% 15.1%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 85.7% 97.3%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 142.4 71.8% 29.2%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-green-400 to-blue-500">
+  <div id="popup" class="fixed inset-0 bg-black/70 flex items-center justify-center">
+    <div class="bg-card text-card-foreground p-8 rounded-lg shadow-xl max-w-4xl w-full transition-transform transform scale-95 hover:scale-100">
+      <h1 style="color: black;" class="text-3xl font-bold mb-4 text-accent">The Role of AI Technology in Helping Farmers Predict Crop Diseases</h1>
+      <p class="mb-4">Agriculture is critical for sustaining human life and driving economies. However, it faces challenges like climate change and crop diseases. AI technology offers a proactive approach, enabling farmers to predict and manage crop diseases before significant harm occurs.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Understanding AI's Role in Agriculture</h2>
+      <p>AI transforms modern farming by integrating data analysis and smart sensors, allowing farmers to monitor crops in real-time and identify early signs of disease.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Early Detection and Targeted Treatment</h2>
+      <p>AI-based systems enable early detection of crop diseases, allowing timely intervention. Tools can analyze images captured by drones to detect abnormalities signaling potential diseases.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Increasing Yields and Reducing Losses</h2>
+      <p>By predicting disease outbreaks, AI helps minimize losses and ensure higher yields, with studies showing reductions in crop loss by up to 25%.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Sustainability and Environmental Impact</h2>
+      <p>AI promotes sustainability by reducing reliance on chemical treatments, helping to preserve soil health and biodiversity.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Challenges and Future Prospects</h2>
+      <p>Despite its advantages, AI adoption faces challenges, including costs and the need for farmer education.</p>
+      
+      <h2 style="color: black;" class="font-semibold mt-4 text-secondary">Conclusion</h2>
+      <p>AI technology revolutionizes agriculture by enabling efficient disease prediction and management, leading to sustainable practices and improved yields.</p>
+      
+      <div class="flex justify-between mt-4">
+        <a href="home.html" class="bg-destructive text-destructive-foreground p-2 rounded-lg shadow-lg hover:bg-destructive/80 transition duration-300">Close</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const closePopup = document.getElementById('closePopup');
+  
+  closePopup.addEventListener('click', () => {
+    popup.classList.add('hidden');
+  });
+  
+  backPopup.addEventListener('click', () => {
+    popup.classList.add('hidden');
+  });
+</script>
+
+
+  </body>
+</html>

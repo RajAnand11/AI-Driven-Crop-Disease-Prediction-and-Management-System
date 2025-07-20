@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Info Lookup and Additional Images</title>
+    <link rel="stylesheet" href="aimodal.css">
+</head>
+<body style="background-color: #74df9f;">
+    <div class="container">
+        <h1>Please Upload an Image..! </h1>
+
+        
+        <div class="upload-section">
+            <label for="imageUpload">Upload Image:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="getImageInfo()">Get Info</button>
+        </div>
+        
+        <!-- Preview of the uploaded image -->
+        <div id="imagePreviewContainer">
+            <img id="uploadedImagePreview">
+        </div>
+        
+        <!-- Additional images -->
+        <div id="additionalImagesContainer">
+            <img id="additionalImage1">
+            <img id="additionalImage2">
+        </div>
+        
+         <!-- Information about the image -->
+         <div id="info"></div>
+
+        <!-- Spinner for processing -->
+        <div id="loadingSpinner"></div>
+    </div>
+
+    <script src="aimodal.js"></script>
+</body>
+</html>

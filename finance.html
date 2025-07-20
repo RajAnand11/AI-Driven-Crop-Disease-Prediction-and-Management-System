@@ -1,0 +1,326 @@
+<html class="animate">
+ <head>
+  <title>
+   Finance Management
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8e8;
+        }
+        .animate {
+      opacity: 0;
+      transform: translateY(100px);
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    /* Define the keyframes for the slide-in effect */
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add some delay between each element's animation */
+    .animate:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .animate:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .animate:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header img {
+            height: 50px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            color: #2b2b2b;
+            margin: 0;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+            margin-left: auto;
+        }
+        .nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #2b2b2b;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .content {
+            max-width: 50%;
+        }
+        .content h1 {
+            font-size: 48px;
+            color: #2b2b2b;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            color: #6b6b6b;
+            margin-bottom: 20px;
+        }
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content ul li {
+            font-size: 18px;
+            color: #2b2b2b;
+            margin-bottom: 10px;
+        }
+        .content ul li i {
+            color: #4caf50;
+            margin-right: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .buttons .try-free {
+            background-color: #4caf50;
+            color: white;
+        }
+        .buttons .contact-support {
+            background-color: white;
+            color: #2b2b2b;
+            border: 1px solid #2b2b2b;
+        }
+        .image {
+            max-width: 45%;
+        }
+        .image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .faq-heading {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 36px;
+            color: #2b2b2b;
+        }
+        .subheading {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #2b2b2b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .subheading i {
+            transition: transform 0.3s;
+        }
+        .subheading i.rotate {
+            transform: rotate(45deg);
+        }
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #6b6b6b;
+        }
+        .about-finance {
+            text-align: center;
+            margin: 50px 50px;
+            font-size: 18px;
+            color: #6b6b6b;
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+  </style>
+  <script>
+   function toggleContent(id) {
+            var icon = document.getElementById('toggle-icon-' + id);
+            var content = document.getElementById('hidden-content-' + id);
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.classList.add('rotate');
+            } else {
+                content.style.display = 'none';
+                icon.classList.remove('rotate');
+            }
+        }
+  </script>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Aarable Farming Logo" height="50" src="Only Image/aarablelogo.jpg" width="50"/>
+   <h1>
+    AGROFILED
+   </h1>
+   <div class="nav">
+    <a href="home.html">
+     Home
+    </a>
+    <a href="#">
+     Finance
+    </a>
+    <a href="MainMedia.html">
+     Media
+    </a>
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Services</a>
+        <div class="dropdown-content">
+          <a href="weather.html">Weather</a>
+          <a href="#">Near Shop</a>
+          <a href="aimodal.html">Scan Image</a>
+        </div>
+      </div>
+   </div>
+  </div>
+  <div class="container">
+   <div class="content">
+    <h1>
+     Start Managing Your Finances Today
+    </h1>
+    <p>
+     Take control of your farm's financial health with our easy-to-use tools.
+    </p>
+    <ul>
+     <li>
+      <i class="fas fa-check">
+      </i>
+      Track income and expenses
+     </li>
+     <li>
+      <i class="fas fa-check">
+      </i>
+      Generate financial reports
+     </li>
+     <li>
+      <i class="fas fa-check">
+      </i>
+      Plan for future investments
+     </li>
+    </ul>
+    <div class="buttons">
+     <a class="try-free" href="financepop.html">
+      <i class="fas fa-edit">
+      </i>
+      Get Start
+     </a>
+    </div>
+   </div>
+   <div class="image">
+    <img alt="Farmer using a mobile phone in front of a barn" height="400" src="Only Image\financepagewali.jpg" width="600"/>
+   </div>
+  </div>
+  <h2 class="faq-heading">
+   Financial Records FAQs
+  </h2>
+  <div class="subheading" onclick="toggleContent('1')">
+   <span>
+    How can I add a new transaction?
+   </span>
+   <i class="fas fa-plus" id="toggle-icon-1">
+   </i>
+  </div>
+  <div class="hidden-content" id="hidden-content-1">
+   <p>
+    Use the 'Add Transaction' button at the top of the table to input new financial entries.
+   </p>
+  </div>
+  <div class="subheading" onclick="toggleContent('2')">
+   <span>
+    Can I export my financial records?
+   </span>
+   <i class="fas fa-plus" id="toggle-icon-2">
+   </i>
+  </div>
+  <div class="hidden-content" id="hidden-content-2">
+   <p>
+    Yes, you can export your financial records by clicking the 'Export' button located at the top right of the financial records table.
+   </p>
+   <p>
+    Yes, you can export your records to a CSV file for offline use.
+   </p>
+  </div>
+  <div class="subheading" onclick="toggleContent('3')">
+   <span>
+    How do I categorize transactions?
+   </span>
+   <i class="fas fa-plus" id="toggle-icon-3">
+   </i>
+  </div>
+  <div class="hidden-content" id="hidden-content-3">
+   <p>
+    You can categorize transactions by selecting the appropriate category from the dropdown menu when adding or editing a transaction.
+   </p>
+   <p>
+    You can categorize transactions by selecting the appropriate type from the dropdown menu when adding a new record.
+   </p>
+  </div>
+  <h2 class="faq-heading">
+   About Finance
+  </h2>
+  <div class="about-finance">
+   <p>
+    In farming, budgeting and planning are vital for managing finances and boosting income. By meticulously recording past expenses and revenues, farmers can develop accurate budgets that ensure efficient allocation of resources for seeds, fertilizers, labor, and equipment. This financial foresight enables them to project future earnings based on historical data, manage cash flow effectively, and make informed decisions about investments in new technologies or crop varieties. Setting and tracking financial goals becomes more attainable with a clear budget, guiding efforts toward increased profitability and sustainable growth. Additionally, well-prepared budgets help farmers plan for potential risks, such as adverse weather or market fluctuations, allowing them to mitigate uncertainties and stabilize their operations. Overall, integrating detailed budgeting and planning into farming practices helps optimize resource use, reduce costs, and enhance overall income.
+   </p>
+  </div>
+ </body>
+</html>
